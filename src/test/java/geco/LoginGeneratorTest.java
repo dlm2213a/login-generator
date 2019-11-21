@@ -32,4 +32,16 @@ public class LoginGeneratorTest {
         assertEquals("JRAL2", loginGenere.generateLoginForNomAndPrenom("Ralling", "John"));
         assertTrue(loginService.loginExists("JRAL2"));
     }
+
+    @Test
+    public void testGenerateLoginJeanRolling() {
+        assertEquals("JROL1", loginGenere.generateLoginForNomAndPrenom("Rolling", "Jean"));
+        assertTrue(loginService.loginExists("JROL1"));
+    }
+
+    @Test
+    public void testGenerateLoginPaulDurandAccent() {
+        assertEquals("PDUR", loginGenere.generateLoginForNomAndPrenom("Dùrand", "Paul"));
+        assertTrue(loginService.loginExists("PDUR"));
+    }
 }
